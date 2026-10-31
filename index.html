@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brainstorm Clips</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #0b0d12;
+    --fg: #e8eaed;
+    --muted: #9aa3b2;
+    --accent: #6ea8fe;
+    --card: #141821;
+    --border: #262b36;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1d23;
+      --muted: #5b6472;
+      --accent: #2f6fed;
+      --card: #f6f7f9;
+      --border: #e3e6eb;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.25em;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-top: 0;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 32px 0;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 0;
+  }
+  ul {
+    padding-left: 1.2em;
+  }
+  a {
+    color: var(--accent);
+  }
+  footer {
+    margin-top: 48px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+  code {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Brainstorm Clips</h1>
+    <p class="tagline">A self-hosted tool that turns long-form video into short, captioned clips and publishes them to YouTube channels we manage.</p>
+
+    <div class="card">
+      <h2>What this is</h2>
+      <p>
+        Brainstorm Clips is a privately operated, self-hosted application
+        (built on the open-source <a href="https://github.com/FujiwaraChoki/supoclip">SupoClip</a>
+        project). It runs entirely on infrastructure we control &mdash; there
+        is no public sign-up and no third-party hosting involved.
+      </p>
+      <p>
+        The application connects to YouTube via Google's OAuth so it can
+        read basic channel information and upload finished clips to the
+        specific YouTube channels we have explicitly connected and manage.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>What it does with YouTube access</h2>
+      <ul>
+        <li>Reads basic metadata for the connected channel, so we can confirm we're publishing to the right one.</li>
+        <li>Uploads finished video clips to that connected channel on our behalf.</li>
+        <li>Never accesses, modifies, or reads any YouTube data outside the channels we've explicitly connected.</li>
+      </ul>
+      <p>See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+    </div>
+
+    <footer>
+      Contact: <a href="mailto:bruno@brainstormtech.io">bruno@brainstormtech.io</a>
+    </footer>
+  </div>
+</body>
+</html>
